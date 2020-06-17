@@ -2,6 +2,7 @@ package com.jinjin.springboot.service;
 
 import com.jinjin.springboot.domain.Posts.Posts;
 import com.jinjin.springboot.domain.Posts.PostsRepository;
+import com.jinjin.springboot.web.dto.PostsResponseDto;
 import com.jinjin.springboot.web.dto.PostsSaveRequestDto;
 import com.jinjin.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +29,16 @@ public class PostsService {
                 ));
 
         posts.update(requestDto.getTitle(), requestDto.getContent());
-
         return id;
+    }
+
+    @Transactional
+    public PostsResponseDto findById(Long id) {
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(
+                        "no exist post. id : " + id
+                ));
+
+        return new PostsResponseDto(posts);
     }
 }

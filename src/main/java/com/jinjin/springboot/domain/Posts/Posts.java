@@ -1,5 +1,7 @@
 package com.jinjin.springboot.domain.Posts;
 
+import com.jinjin.springboot.domain.BaseTimeEntity;
+import com.jinjin.springboot.web.dto.PostsResponseDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,4 +36,5 @@ public class Posts {
         this.title = title;
         this.content = content;
     }
+
 }
