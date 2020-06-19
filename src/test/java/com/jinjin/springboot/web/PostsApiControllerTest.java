@@ -121,25 +121,4 @@ public class PostsApiControllerTest {
         assertThat(postsList.get(0).getContent()).isEqualTo(expectContent);
     }
 
-    @Test
-    public void post_조회() throws IOException {
-        // given
-        Posts posts = postsRepository.save(Posts.builder()
-                .title("title")
-                .content("content")
-                .author("author")
-                .build());
-
-        Long id = posts.getId();
-
-        String url = "http://localhost:" + port + "/api/v1/posts/" + id;
-
-        // when
-        ResponseEntity<String> responseEntity
-                = restTemplate.getForEntity(url, String.class);
-
-        // then
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(responseEntity.getBody()).contains("title");
-    }
 }
