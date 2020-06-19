@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jinjin.springboot.web.PostsApiControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-19T08:28:05" hostname="DESKTOP-A8NIIPA" time="0.335">
+  <properties/>
+  <testcase name="post_등록하다" classname="com.jinjin.springboot.web.PostsApiControllerTest" time="0.13"/>
+  <testcase name="post_수정" classname="com.jinjin.springboot.web.PostsApiControllerTest" time="0.138"/>
+  <testcase name="post_조회" classname="com.jinjin.springboot.web.PostsApiControllerTest" time="0.064"/>
+  <system-out><![CDATA[2020-06-19 17:28:05.860  INFO 11192 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jinjin.springboot.web.PostsApiControllerTest], using SpringBootContextLoader
+2020-06-19 17:28:05.861  INFO 11192 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jinjin.springboot.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-19 17:28:05.861  INFO 11192 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jinjin.springboot.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-19 17:28:05.864  INFO 11192 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jinjin.springboot.Application for test class com.jinjin.springboot.web.PostsApiControllerTest
+2020-06-19 17:28:05.867  INFO 11192 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-06-19 17:28:05.869  INFO 11192 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@431b99fb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@43c8c57, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78370efe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2ea52f5d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@316ebf33, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5150d37d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11506757, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@16887de7, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@525bcf22, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@547352f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@17bf900f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@428db05a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4e2345f6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7271ff50]
+2020-06-19 17:28:05.888  INFO 11192 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2020-06-19 17:28:05.888  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-19 17:28:05.893  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
+2020-06-19 17:28:05.985 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:05.985 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:05.985 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [author]
+2020-06-19 17:28:05.986 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [content]
+2020-06-19 17:28:05.986 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [title]
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
+2020-06-19 17:28:05.996 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [BIGINT]) - [1]
+2020-06-19 17:28:05.996 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_] : [TIMESTAMP]) - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:05.997 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_] : [TIMESTAMP]) - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:05.997 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:05.997 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_] : [VARCHAR]) - [content]
+2020-06-19 17:28:05.997 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_] : [VARCHAR]) - [title]
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
+2020-06-19 17:28:06.001 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [BIGINT]) - [1]
+2020-06-19 17:28:06.001 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_] : [TIMESTAMP]) - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:06.001 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_] : [TIMESTAMP]) - [2020-06-19T17:28:05.983]
+2020-06-19 17:28:06.001 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:06.002 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_] : [VARCHAR]) - [content]
+2020-06-19 17:28:06.002 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_] : [VARCHAR]) - [title]
+Hibernate: delete from posts where id=?
+2020-06-19 17:28:06.003 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2020-06-19 17:28:06.013  INFO 11192 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2020-06-19 17:28:06.013  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-19 17:28:06.018  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
+2020-06-19 17:28:06.030 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.032 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.034 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [author]
+2020-06-19 17:28:06.036 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [content]
+2020-06-19 17:28:06.039 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [title]
+Hibernate: select posts0_.id as id1_0_0_, posts0_.created_date as created_2_0_0_, posts0_.modified_date as modified3_0_0_, posts0_.author as author4_0_0_, posts0_.content as content5_0_0_, posts0_.title as title6_0_0_ from posts posts0_ where posts0_.id=?
+2020-06-19 17:28:06.061 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2020-06-19 17:28:06.068 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.069 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.069 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:06.077 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_0_] : [VARCHAR]) - [content]
+2020-06-19 17:28:06.080 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_0_] : [VARCHAR]) - [title]
+Hibernate: update posts set created_date=?, modified_date=?, author=?, content=?, title=? where id=?
+2020-06-19 17:28:06.090 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.091 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2020-06-19T17:28:06.084]
+2020-06-19 17:28:06.093 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [author]
+2020-06-19 17:28:06.094 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [new Content]
+2020-06-19 17:28:06.097 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [new Title]
+2020-06-19 17:28:06.099 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [2]
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
+2020-06-19 17:28:06.110 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [BIGINT]) - [2]
+2020-06-19 17:28:06.112 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.113 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.084]
+2020-06-19 17:28:06.115 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:06.115 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_] : [VARCHAR]) - [new Content]
+2020-06-19 17:28:06.116 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_] : [VARCHAR]) - [new Title]
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
+2020-06-19 17:28:06.132 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [BIGINT]) - [2]
+2020-06-19 17:28:06.137 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.028]
+2020-06-19 17:28:06.138 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.084]
+2020-06-19 17:28:06.140 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:06.140 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_] : [VARCHAR]) - [new Content]
+2020-06-19 17:28:06.140 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_] : [VARCHAR]) - [new Title]
+Hibernate: delete from posts where id=?
+2020-06-19 17:28:06.141 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2020-06-19 17:28:06.150  INFO 11192 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2020-06-19 17:28:06.151  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-06-19 17:28:06.156  INFO 11192 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
+2020-06-19 17:28:06.158 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2020-06-19T17:28:06.158]
+2020-06-19 17:28:06.159 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2020-06-19T17:28:06.158]
+2020-06-19 17:28:06.159 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [author]
+2020-06-19 17:28:06.160 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [content]
+2020-06-19 17:28:06.160 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [title]
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
+2020-06-19 17:28:06.206 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [BIGINT]) - [3]
+2020-06-19 17:28:06.206 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([created_2_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.158]
+2020-06-19 17:28:06.206 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([modified3_0_] : [TIMESTAMP]) - [2020-06-19T17:28:06.158]
+2020-06-19 17:28:06.206 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([author4_0_] : [VARCHAR]) - [author]
+2020-06-19 17:28:06.207 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([content5_0_] : [VARCHAR]) - [content]
+2020-06-19 17:28:06.207 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([title6_0_] : [VARCHAR]) - [title]
+Hibernate: delete from posts where id=?
+2020-06-19 17:28:06.208 TRACE 11192 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
