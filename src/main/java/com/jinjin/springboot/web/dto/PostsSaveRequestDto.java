@@ -1,6 +1,6 @@
 package com.jinjin.springboot.web.dto;
 
-import com.jinjin.springboot.domain.Posts.Posts;
+import com.jinjin.springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

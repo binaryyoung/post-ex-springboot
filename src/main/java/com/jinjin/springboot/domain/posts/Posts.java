@@ -1,7 +1,6 @@
-package com.jinjin.springboot.domain.Posts;
+package com.jinjin.springboot.domain.posts;
 
 import com.jinjin.springboot.domain.BaseTimeEntity;
-import com.jinjin.springboot.web.dto.PostsResponseDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

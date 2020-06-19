@@ -1,7 +1,5 @@
 package com.jinjin.springboot.domain.posts;
 
-import com.jinjin.springboot.domain.Posts.Posts;
-import com.jinjin.springboot.domain.Posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
