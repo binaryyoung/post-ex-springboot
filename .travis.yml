@@ -17,7 +17,7 @@ before_install:
 
 
 before_deploy:
-  - zip -r post-ex-springboot
+  - zip -r post-ex-springboot *
   - mkdir -p deploy
   - mv post-ex-springboot.zip deploy/post-ex-springboot.zip
 
