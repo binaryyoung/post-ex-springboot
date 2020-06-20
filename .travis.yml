@@ -12,6 +12,10 @@ cache:
     - '$HOME/.gradle'
 script: "./gradlew clean build"
 
+before_install:
+  - chmod +x gradlew
+
+
 before_deploy:
   - zip -r post-ex-springboot
   - mkdir -p deploy
