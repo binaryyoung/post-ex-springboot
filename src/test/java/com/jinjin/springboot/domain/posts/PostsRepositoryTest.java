@@ -47,7 +47,7 @@ public class PostsRepositoryTest {
     @Test
     public void BaseTimeEntity_테스트() {
         // given
-        LocalDateTime nowTime = LocalDateTime.now();
+        LocalDateTime nowTime = LocalDateTime.of(2020,6,10,0,0);
 
         // when
         postsRepository.save(Posts.builder()
