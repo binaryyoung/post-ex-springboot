@@ -12,6 +12,22 @@ cache:
     - '$HOME/.gradle'
 script: "./gradlew clean build"
 
+before_deploy:
+  - zip -r post-ex-springboot
+  - mkdir -p deploy
+  - mv post-ex-springboot.zip deploy/post-ex-springboot.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # Travis repo setting에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo setting에 설정된 값
+    bucket: post-springboot-build # S3 버킷
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private #zip 파일 접근 권한 private
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true
+
 # CI 실행 완료 시 메일로 알람
 notifications:
   email:
