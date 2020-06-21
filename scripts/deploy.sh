@@ -35,7 +35,4 @@ echo "> $JAR_NAME 실행 "
 
 EX_CONFIG_REPO=/home/ec2-user/app
 
-nohup java -jar \
-    -Dspring.config.location=classpath:/application.yml,$EX_CONFIG_REPO/application-oauth.yml,$EX_CONFIG_REPO/application-real-db.yml
-\
-$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+nohup java -Dspring.config.location=classpath:/application.yml,$EX_CONFIG_REPO/application-oauth.yml,$EX_CONFIG_REPO/application-real-db.yml -jar $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
