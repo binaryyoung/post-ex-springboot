@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/ec2-uesr/app/step2
+REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=post-ex-springboot
 
 echo ">build 파일 복사"
