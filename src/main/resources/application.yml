@@ -25,3 +25,19 @@ spring.profiles: real
 spring.profiles.include:
   - oauth
   - real-db
+
+# real1
+---
+spring.profiles: real1
+server.port: 8081
+spring.profiles.include:
+  - oauth
+  - real-db
+
+# real2
+---
+spring.profiles: real2
+server.port: 8082
+spring.profiles.include:
+  - oauth
+  - real-db
