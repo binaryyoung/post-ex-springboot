@@ -1,9 +1,5 @@
 spring:
-
-# local
----
-spring:
-  profiles: local
+  profiles.include: oauth
   jpa:
     show_sql: true
     hibernate:
